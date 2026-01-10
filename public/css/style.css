@@ -1,0 +1,190 @@
+:root {
+    --primary-color: #4e54c8;
+    --secondary-color: #8f94fb;
+    --accent-color: #ff6b6b;
+    --text-dark: #333;
+    --text-muted: #777;
+    --bg-gradient: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+    --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    --glass-bg: rgba(255, 255, 255, 0.8);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg-gradient);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: var(--text-dark);
+
+    overflow-x: hidden;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.navbar {
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 15px rgba(0,0,0,0.03);
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.4rem;
+    
+    background: -webkit-linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    
+    background-clip: text; 
+    
+    -webkit-background-clip: text;
+    
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.5px;
+}
+
+.main-container {
+    max-width: 1100px;
+}
+
+.card-custom {
+    background: white;
+    border: none;
+    border-radius: 20px;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease;
+}
+
+.card-header-custom {
+    background: white;
+    padding: 25px 30px 10px;
+    border-bottom: none;
+}
+
+.card-body-custom {
+    padding: 10px 30px 30px;
+}
+
+.form-control {
+    border: 2px solid #eee;
+    border-radius: 12px;
+    padding: 12px 15px;
+    font-size: 0.95rem;
+    transition: all 0.3s;
+    background-color: #f9f9f9;
+}
+
+.form-control:focus {
+    background-color: white;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 4px rgba(78, 84, 200, 0.1);
+}
+
+.table-custom {
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+.table-custom thead th {
+    border: none;
+    color: var(--text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    padding-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.table-custom tbody tr {
+    background: white;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.02);
+    border-radius: 15px;
+    transition: all 0.2s;
+}
+
+.table-custom tbody tr:hover {
+    background-color: #f4f6f9;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    cursor: pointer;
+}
+
+.table-custom td {
+    border: none;
+    vertical-align: middle;
+    padding: 20px;
+}
+
+.table-custom td:first-child { border-top-left-radius: 15px; border-bottom-left-radius: 15px; }
+.table-custom td:last-child { border-top-right-radius: 15px; border-bottom-right-radius: 15px; }
+
+.img-product {
+    width: 50px; 
+    height: 50px; 
+    object-fit: cover; 
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    border: none;
+    box-shadow: 0 4px 15px rgba(78, 84, 200, 0.3);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(45deg, #4046b8, #7d82f3);
+    transform: translateY(-2px);
+}
+
+.login-body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.login-card {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(20px);
+    border-radius: 25px;
+    border: 1px solid rgba(255,255,255,0.5);
+    padding: 40px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+}
+
+.product-link {
+    transition: color 0.2s;
+}
+.product-link:hover {
+    color: var(--primary-color) !important;
+    text-decoration: underline !important;
+}
+
+* {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    background: transparent;
+}
+
+.hover-effect {
+    transition: all 0.2s;
+}
+.hover-effect:hover {
+    background-color: rgba(78, 84, 200, 0.1);
+    color: #4e54c8 !important;
+}
