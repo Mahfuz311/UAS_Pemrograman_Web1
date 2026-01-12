@@ -13,8 +13,7 @@
 
 > **Aplikasi Kasir & Inventaris Berbasis Web dengan PHP Native.**
 
-![Banner Project](screenshots/dashboard.png)
-*(Ganti gambar ini dengan screenshot dashboard utama)*
+![Banner Project](https://github.com/Mahfuz311/UAS_Pemrograman_Web1/blob/434a5776c0991fdea0e8d067a77d9a2acfc54470/screenshot/dashboard.png)
 
 ## 📖 Deskripsi Project
 
@@ -86,6 +85,8 @@ Aplikasi ini memisahkan logika (Controller), data (Model), dan tampilan (View) k
 │   ├── css/             # File CSS Custom
 │   ├── img/             # Tempat penyimpanan foto produk
 │   └── index.php        # Entry Point (Gerbang Utama Aplikasi)
+├── .htaccess
+├── screenshot/
 └── README.md            # Dokumentasi ini
 ```
 
@@ -93,20 +94,60 @@ Aplikasi ini memisahkan logika (Controller), data (Model), dan tampilan (View) k
 
 Berikut adalah tampilan antarmuka aplikasi pada setiap proses:
 
-1. Halaman Dashboard & Produk
-Admin dapat melihat daftar produk dengan tampilan kartu atau tabel. (Pastikan file gambar ada di folder screenshots dengan nama produk_index.png)
+### 1. Halaman Dashboard & Produk
+Admin dapat melihat daftar produk dengan tampilan kartu atau tabel.
 
-2. Manajemen User
+<img src="https://github.com/Mahfuz311/UAS_Pemrograman_Web1/blob/434a5776c0991fdea0e8d067a77d9a2acfc54470/screenshot/dashboard_admin.png">
+<img src="https://github.com/Mahfuz311/UAS_Pemrograman_Web1/blob/434a5776c0991fdea0e8d067a77d9a2acfc54470/screenshot/page.png">
+
+### Deskripsi Produk
+
+<img src="https://github.com/Mahfuz311/UAS_Pemrograman_Web1/blob/434a5776c0991fdea0e8d067a77d9a2acfc54470/screenshot/deskripsi_produk.png">
+
+### Tambah Produk
+
+<img src="https://github.com/Mahfuz311/UAS_Pemrograman_Web1/blob/434a5776c0991fdea0e8d067a77d9a2acfc54470/screenshot/tambah_produk.png">
+
+### Edit Produk
+
+<img src="https://github.com/Mahfuz311/UAS_Pemrograman_Web1/blob/434a5776c0991fdea0e8d067a77d9a2acfc54470/screenshot/edit_produk.png">
+
+### Hapus Produk
+
+<img src="https://github.com/Mahfuz311/UAS_Pemrograman_Web1/blob/434a5776c0991fdea0e8d067a77d9a2acfc54470/screenshot/hapus_produk.png">
+Klik "OK"
+
+### Dashboard User
+
+<img src="https://github.com/Mahfuz311/UAS_Pemrograman_Web1/blob/434a5776c0991fdea0e8d067a77d9a2acfc54470/screenshot/dashboard_user.png">
+
+---
+
+### 2. Manajemen User
 Fitur untuk mengelola akun admin dan user aplikasi.
 
-3. Proses Checkout (Pembelian)
+<img src="https://github.com/Mahfuz311/UAS_Pemrograman_Web1/blob/434a5776c0991fdea0e8d067a77d9a2acfc54470/screenshot/user_index.png">
+
+### 3. Proses Checkout (Pembelian)
 Form konfirmasi pembelian untuk mencatat data pelanggan.
 
-4. Laporan Penjualan
+<img src="https://github.com/Mahfuz311/UAS_Pemrograman_Web1/blob/434a5776c0991fdea0e8d067a77d9a2acfc54470/screenshot/CO.png">
+
+### Checkout Sukses
+
+<img src="https://github.com/Mahfuz311/UAS_Pemrograman_Web1/blob/434a5776c0991fdea0e8d067a77d9a2acfc54470/screenshot/CO_sukses.png">
+
+### 4. Laporan Penjualan
 Rekapitulasi transaksi yang bisa dicetak.
 
-5. Edit Profil
+<img src="https://github.com/Mahfuz311/UAS_Pemrograman_Web1/blob/434a5776c0991fdea0e8d067a77d9a2acfc54470/screenshot/laporan.png">
+
+### 6. Edit Profil
 Halaman untuk memperbarui informasi akun pribadi.
+
+<img src="https://github.com/Mahfuz311/UAS_Pemrograman_Web1/blob/434a5776c0991fdea0e8d067a77d9a2acfc54470/screenshot/profil_admin.png">
+
+<img src="https://github.com/Mahfuz311/UAS_Pemrograman_Web1/blob/434a5776c0991fdea0e8d067a77d9a2acfc54470/screenshot/profil_user.png">
 
 ## ⚙️ Cara Instalasi & Menjalankan
 
@@ -114,25 +155,13 @@ Ikuti langkah ini untuk menjalankan project di komputer lokal:
 
 Siapkan Server: Pastikan XAMPP atau Laragon sudah terinstall dan aktif (Apache & MySQL).
 
-Simpan Folder: Letakkan folder project ini di dalam htdocs (jika XAMPP) atau www (jika Laragon).
-
-Import Database:
-
-Buka localhost/phpmyadmin.
-
-Buat database baru bernama db_tugas_oop.
-
-Import file database.sql (disertakan dalam project) ke database tersebut.
-
-Konfigurasi Koneksi:
-
-Cek file app/core/Database.php atau app/config/config.php.
-
-Pastikan username (root) dan password database sesuai.
-
 Jalankan:
 
 Buka browser dan akses: http://localhost/aplikasi_manajemen_produk/public/product/index
+
+---
+
+### Link Youtube: https://youtu.be/xfAkVzl2O2M?si=Qe7zxT8VoSiOnuk7
 
 Dibuat untuk memenuhi tugas Pemrograman Web 1.
 
