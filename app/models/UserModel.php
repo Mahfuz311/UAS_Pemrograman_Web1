@@ -65,9 +65,16 @@ class UserModel {
     }
 
     public function delete($id) {
-        $query = "DELETE FROM " . $this->table . " WHERE id = :id";
-        $stmt = $this->conn->prepare($query);
-        $stmt->bindParam(':id', $id);
-        return $stmt->execute();
+        try {
+            $query = "DELETE FROM " . $this->table . " WHERE id = :id";
+            $stmt = $this->conn->prepare($query);
+            $stmt->bindParam(':id', $id);
+            return $stmt->execute();
+        } catch (PDOException $e) {
+            if ($e->getCode() == '23000') {
+                return "constraint_error"; 
+            }
+            return false;
+        }
     }
 }

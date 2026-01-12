@@ -74,8 +74,17 @@ class UserController {
         }
 
         $model = new UserModel();
-        if ($model->delete($id)) {
+        $result = $model->delete($id);
+
+        if ($result === true) {
             header("Location: /aplikasi_manajemen_produk/public/user/index");
+        } elseif ($result === "constraint_error") {
+            echo "<script>
+                    alert('GAGAL MENGHAPUS! \\n\\nUser ini memiliki riwayat transaksi penjualan. Demi keamanan data keuangan, user yang sudah pernah bertransaksi tidak boleh dihapus.\\n\\nSolusi: Edit user ini dan ubah passwordnya saja agar tidak bisa login.');
+                    window.location='/aplikasi_manajemen_produk/public/user/index';
+                  </script>";
+        } else {
+            echo "<script>alert('Gagal menghapus data.'); window.location='/aplikasi_manajemen_produk/public/user/index';</script>";
         }
     }
 }
